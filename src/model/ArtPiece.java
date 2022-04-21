@@ -16,7 +16,7 @@ public class ArtPiece {
     @Column(name = "creationdate") 
     private LocalDate creationDate;
 
-    // Bidirectional many-to-one back to buildings??
+    // Bidirectional link back to the parent Building
     @ManyToOne
     @JoinColumn(name = "building_id")
     private Building building;
@@ -36,7 +36,6 @@ public class ArtPiece {
         this.building = building;
     }
 
-    // do we need toString() ??
     @Override
     public String toString() {
         return "Title: '" + title + "', Artist: " + artist + ", Creation Date: " + creationDate + ", Building: " + building;

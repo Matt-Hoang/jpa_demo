@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 
 @Entity(name = "viewings")
 public class Viewing {
+    // This class has a 3 column PK: 2 FKs and the date viewed
     @Id
     @JoinColumn(name = "artpiece_id")
     @ManyToOne
