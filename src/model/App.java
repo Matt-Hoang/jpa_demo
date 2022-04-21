@@ -1,3 +1,4 @@
+package model;
 import java.util.List;
 import java.util.Scanner;
 
@@ -205,7 +206,7 @@ public class App {
         
         Building building1 = em.createQuery(jpaQuery, Building.class).getSingleResult();
 
-        for (ArtPiece a : building1.getArtPieces()) {
+        for (ArtPiece a : building1.getArtpieces()) {
              System.out.println(a);
         }
 
